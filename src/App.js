@@ -4,6 +4,7 @@ import FormComponent from "./components/FormComponent/FormComponent";
 import "./styles.css";
 import underlineimg1 from "./assets/underlineimg1.png";
 import underlineimg2 from "./assets/underlineimg2.png";
+import RewardsBanner from "./components/RewardsBanner/RewardsBanner";
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
       {/* <HeadingComponent text="Basic ZRP Plan" img={underlineimg2} /> */}
       <ZopperPlanCard />
       <FormComponent />
+      <RewardsBanner />
     </div>
   );
 }
