@@ -47,9 +47,9 @@ function FormComponent() {
       <form onSubmit={handleSubmit}>
         <FormControl>
           <Box className="FormComponent__InputsContainer">
-            <Input type="text" placeholder="Title" required />
-            <Input type="text" placeholder="Body" required />
-            <Input
+            <Input className="FormComponent__Input" size="md" type="text" placeholder="Title" required />
+            <Input className="FormComponent__Input" size="md" type="text" placeholder="Body" required />
+            <Input className="FormComponent__Input" size="md"
               type="Number"
               placeholder="UserId"
               required

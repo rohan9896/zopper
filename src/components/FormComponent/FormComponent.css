@@ -9,10 +9,12 @@
 .FormComponent__InputsContainer {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
 }
 
-.FormComponent__InputsContainer > Input {
-  margin: 1rem 0.7rem;
+.FormComponent__Input {
+  margin: 1rem;
 }
 
 .successMsg {
@@ -37,4 +39,5 @@
   .FormComponent__InputsContainer {
     flex-direction: row;
   }
+
 }
