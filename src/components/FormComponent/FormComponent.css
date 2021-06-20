@@ -19,6 +19,13 @@
 
 .successMsg {
   color: green;
+}
+
+.errMsg {
+  color: red;
+}
+
+.successMsg, .errMsg {
   margin: 0.5rem;
 }
 

@@ -1,18 +1,25 @@
-import HeadingComponent from "./components/HeadingComponent/HeadingComponent";
+import { Routes, Route } from "react-router-dom";
 import ZopperPlanCard from "./components/ZopperPlanCard/ZopperPlanCard";
-import FormComponent from "./components/FormComponent/FormComponent";
 import "./styles.css";
-import underlineimg1 from "./assets/underlineimg1.png";
-import underlineimg2 from "./assets/underlineimg2.png";
 import RewardsBanner from "./components/RewardsBanner/RewardsBanner";
+import FormPage from "./pages/FormPage/FormPage"
 
 export default function App() {
   return (
     <div className="App">
-      {/* <HeadingComponent text="Basic ZRP Plan" img={underlineimg2} /> */}
-      <ZopperPlanCard />
-      <FormComponent />
-      <RewardsBanner />
+      <Routes>
+        <Route path='/' element={
+          <>
+            <RewardsBanner />
+            <ZopperPlanCard />
+          </>
+        } />
+      </Routes>
+      <Route path={`/plans/:planName`} element={
+        <>
+          <FormPage />
+        </>
+      } />
     </div>
   );
 }
