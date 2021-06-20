@@ -7,7 +7,7 @@ import {
   FormLabel,
   Input,
   Flex,
-  Button
+  Button,
 } from "@chakra-ui/react";
 
 function FormComponent() {
@@ -26,11 +26,11 @@ function FormComponent() {
           />
         </Box>
         <Button
-          className="FormComponent__Form__SubmitBtn"
+          width="7rem"
           variant="solid"
-          // isLoading
+          isLoading={false}
           loadingText="Submitting"
-          _hover="#4B5563"
+          style={{ color: "#F9FAFB", background: "#1F2937" }}
         >
           Submit
         </Button>
