@@ -1,4 +1,5 @@
 import React from "react";
+import { v4 as uuid } from "uuid";
 import "./ZopperPlanCard.css";
 import { Button } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
@@ -36,7 +37,7 @@ function ZopperPlanCard({ cardProperties }) {
       <div className="ZopperPlanCard__Images">
         {cardProperties.images.length > 0 ? (
           cardProperties.images.map((image) => {
-            return <img alt="offerImage" src={image} />;
+            return <img key={uuid()} alt="offerImage" src={image} />;
           })
         ) : (
           <div className="ZopperPlanCard__Images__NoImage"></div>
