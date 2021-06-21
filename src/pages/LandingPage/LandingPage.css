@@ -1,0 +1,5 @@
+.LandingPage__Card__Heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

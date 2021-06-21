@@ -1,26 +1,26 @@
 .RewardsBanner {
-    background-color: #EEF2FF;
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    padding: 3rem;
+  background-color: #eef2ff;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  padding: 3rem;
 }
 
 .RewardsBanner_ImageContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .RewardsBanner_ImageContainer > img {
-    width: 20rem;
+  width: 20rem;
 }
 
 @media screen and (min-width: 768px) {
-    .RewardsBanner {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr;
-    }
-    .RewardsBanner_ImageContainer > img {
-        width: 25rem;
-    }
+  .RewardsBanner {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+  }
+  .RewardsBanner_ImageContainer > img {
+    width: 25rem;
+  }
 }

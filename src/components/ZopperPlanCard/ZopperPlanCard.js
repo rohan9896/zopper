@@ -1,28 +1,60 @@
 import React from "react";
-import "./ZopperPlanCard.css"
-import { Box, Button } from "@chakra-ui/react";
+import "./ZopperPlanCard.css";
+import { Button } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
-import HeadingComponent from "../HeadingComponent/HeadingComponent";
-import underlineimg1 from "../../assets/underlineimg1.png"
 
-function ZopperPlanCard() {
-  const cardProperties = {
-    cardColor: "#60A5FA",
-    heading: "basic",
-    price: 249,
-    numberOfCoupons: 5
-  };
-
+function ZopperPlanCard({ cardProperties }) {
   const navigate = useNavigate();
 
   return (
-    <div>
-      <div className="ZopperPlanCard__Heading">
-        <HeadingComponent text="Zopper Plans" img={underlineimg1} alignment="center" />
+    <div
+      style={{ borderColor: cardProperties.cardColor }}
+      className="ZopperPlanCard"
+    >
+      <div className="ZopperPlanCard__HeadingContainer">
+        <div
+          style={{ backgroundColor: cardProperties.cardColor }}
+          className="ZopperPlanCard__Heading"
+        >
+          {cardProperties.heading}
+        </div>
       </div>
-        <Button onClick={() => navigate(`/plans/basic`)}>Basic</Button>
-        <Button onClick={() => navigate(`/plans/standard`)}>Standard</Button>
-        <Button onClick={() => navigate(`/plans/premium`)}>Premium</Button>
+      <div className="ZopperPlanCard__PriceAndCoupon">
+        <span
+          style={{ color: cardProperties.cardColor }}
+          className="ZopperPlanCard__Price"
+        >
+          ₹ {cardProperties.price}
+        </span>
+        &nbsp; +{" "}
+        {cardProperties.numberOfCoupons
+          ? cardProperties.numberOfCoupons + "X"
+          : ""}{" "}
+        coupons
+      </div>
+      <hr />
+      <div className="ZopperPlanCard__Images">
+        {cardProperties.images.length > 0 ? (
+          cardProperties.images.map((image) => {
+            return <img alt="offerImage" src={image} />;
+          })
+        ) : (
+          <div className="ZopperPlanCard__Images__NoImage"></div>
+        )}
+      </div>
+      <p className="ZopperPlanCard__offerDescription">
+        {cardProperties.offerDesciption}
+      </p>
+      <div className="ZopperPlanCard__buyNowBtn">
+        <Button
+          onClick={() =>
+            navigate(`/plans/${cardProperties.heading.toLowerCase()}`)
+          }
+          variant="outline"
+        >
+          Buy Now
+        </Button>
+      </div>
     </div>
   );
 }

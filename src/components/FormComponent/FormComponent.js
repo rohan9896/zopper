@@ -24,7 +24,7 @@ function FormComponent() {
         userId: userIdRef.current.value,
       });
 
-      console.log(response.data)
+      console.log(response.data);
 
       if (response.data) {
         setErr("");
@@ -35,7 +35,7 @@ function FormComponent() {
       console.error(err);
       setSuccess("");
       setErr(err.message);
-    } finally{
+    } finally {
       setLoading(false);
     }
   };

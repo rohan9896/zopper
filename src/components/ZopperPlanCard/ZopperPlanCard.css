@@ -1,4 +1,66 @@
+.ZopperPlanCard {
+  width: 25rem;
+  height: 28rem;
+  border: solid 0.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ZopperPlanCard__HeadingContainer {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
 .ZopperPlanCard__Heading {
-    display: flex;
-    justify-content: center;
+  color: white;
+  font-size: x-large;
+  width: fit-content;
+  padding: 0.7rem 1rem;
+  /* position: absolute;
+    top: -1rem; */
+  border-radius: 0 0 0.3rem 0.3rem;
+}
+
+.ZopperPlanCard__PriceAndCoupon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ZopperPlanCard__Price {
+  font-size: xx-large;
+  font-weight: 600;
+}
+
+.ZopperPlanCard > hr {
+  margin: 1rem;
+}
+
+.ZopperPlanCard__Images {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.ZopperPlanCard__Images > img {
+  width: 6rem;
+  height: 6rem;
+  margin: 1rem;
+}
+
+.ZopperPlanCard__Images__NoImage {
+  width: 6rem;
+  height: 6rem;
+}
+
+.ZopperPlanCard__offerDescription {
+  margin: 1rem;
+}
+
+.ZopperPlanCard__buyNowBtn {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
 }
